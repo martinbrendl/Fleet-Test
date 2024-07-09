@@ -10,12 +10,12 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`www.gotify.jimsgarage.co.uk`) # change to your domain
+    - match: Host(`www.gotify.martinbrendl.com`) # change to your domain
       kind: Rule
       services:
         - name: gotify
           port: 80
-    - match: Host(`gotify.jimsgarage.co.uk`) # change to your domain
+    - match: Host(`gotify.martinbrendl.com`) # change to your domain
       kind: Rule
       services:
         - name: gotify
@@ -23,4 +23,4 @@ spec:
       middlewares:
         - name: default-headers
   tls:
-    secretName: jimsgarage-tls # change to your cert
+    secretName: martinbrendl-tls # change to your cert
